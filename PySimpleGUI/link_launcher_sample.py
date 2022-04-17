@@ -17,7 +17,7 @@ layout_group1.append(layout_group1_Buttons)
 
 layout_group2 = []
 layout_group2_text = [sg.Text('リンクをすべて開く', font=('メイリオ', 10), auto_size_text=True)]
-layout_group2_Buttons = [sg.Button('All Open')]
+layout_group2_Buttons = [sg.Button('Open All')]
 layout_group2.append(layout_group2_text)
 layout_group2.append(layout_group2_Buttons)
 
@@ -41,7 +41,7 @@ while True:
         if event == name:
             webbrowser.open(url)
     # layout_group2 の処理
-    if event == 'All Open':
+    if event == 'Open All':
         for url in dict_link.values():
             webbrowser.open(url)
     if event == None:
